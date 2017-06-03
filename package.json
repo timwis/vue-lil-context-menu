@@ -1,0 +1,35 @@
+{
+  "name": "vue-context",
+  "version": "1.0.0",
+  "description": "A flexible context menu component for Vue",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timwis/vue-context.git"
+  },
+  "keywords": [
+    "vue",
+    "context",
+    "menu"
+  ],
+  "author": "timwis <tim@timwis.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/timwis/vue-context/issues"
+  },
+  "homepage": "https://github.com/timwis/vue-context#readme",
+  "dependencies": {
+    "vue": "^2.3.3"
+  },
+  "devDependencies": {
+    "vueify": "^9.4.1"
+  },
+  "browserify": {
+    "transform": [
+      "vueify"
+    ]
+  }
+}
