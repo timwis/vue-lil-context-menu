@@ -10,7 +10,7 @@ to by using an `onblur` event.
 </div>
 
 <context-menu ref="menu">
-  <ul class="menu">
+  <ul class="options">
     <li @click="onClick('A')">Option A</li>
     <li @click="onClick('B')">Option B</li>
   </ul>
@@ -32,7 +32,7 @@ module.exports = {
 </script>
 
 <style scoped>
-.menu {
+.options {
   width: 250px;
   border: 1px black solid;
 }

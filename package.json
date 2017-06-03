@@ -2,7 +2,7 @@
   "name": "vue-context",
   "version": "1.0.0",
   "description": "A flexible context menu component for Vue",
-  "main": "index.js",
+  "main": "index.vue",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
