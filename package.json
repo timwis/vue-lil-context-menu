@@ -1,5 +1,5 @@
 {
-  "name": "vue-context",
+  "name": "vue-lil-context-menu",
   "version": "1.0.3",
   "description": "A flexible context menu component for Vue",
   "main": "index.vue",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/timwis/vue-context.git"
+    "url": "git+https://github.com/timwis/vue-lil-context-menu.git"
   },
   "keywords": [
     "vue",
@@ -18,9 +18,9 @@
   "author": "timwis <tim@timwis.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/timwis/vue-context/issues"
+    "url": "https://github.com/timwis/vue-lil-context-menu/issues"
   },
-  "homepage": "https://github.com/timwis/vue-context#readme",
+  "homepage": "https://github.com/timwis/vue-lil-context-menu#readme",
   "dependencies": {
     "vue": "^2.3.3"
   },

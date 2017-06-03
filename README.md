@@ -1,4 +1,4 @@
-# vue-context
+# vue-lil-context-menu
 
 A flexible context menu component for Vue. Pass it any menu template you like;
 it doesn't even have to be a menu. Always disappears when you expect it
@@ -17,7 +17,7 @@ to by using an `onblur` event.
 </context-menu>
 
 <script>
-const contextMenu = require('vue-context')
+const contextMenu = require('vue-lil-context-menu')
 
 module.exports = {
   components: {

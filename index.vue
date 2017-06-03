@@ -1,7 +1,7 @@
 <template>
   <div
     v-show="isVisible"
-    class="context-menu"
+    class="lil-context-menu"
     :style="style"
     tabindex="-1"
     @blur="close"
@@ -15,7 +15,7 @@
 const Vue = require('vue')
 
 module.exports = {
-  name: 'context-menu',
+  name: 'lil-context-menu',
   data () {
     return {
       x: null,
@@ -48,11 +48,11 @@ module.exports = {
 </script>
 
 <style scoped>
-.context-menu {
+.lil-context-menu {
   position: fixed;
   z-index: 999;
 }
-.context-menu:focus {
+.lil-context-menu:focus {
   outline: none;
 }
 </style>
