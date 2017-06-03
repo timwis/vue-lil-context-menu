@@ -24,7 +24,7 @@ module.exports = {
   },
   computed: {
     style () {
-      return this.isVisible() ? {
+      return this.isVisible ? {
         top: this.y - document.body.scrollTop + 'px',
         left: this.x + 'px'
       } : {}
