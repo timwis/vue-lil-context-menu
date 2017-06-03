@@ -15,6 +15,7 @@
 const Vue = require('vue')
 
 module.exports = {
+  name: 'context-menu',
   data () {
     return {
       x: null,
@@ -23,10 +24,10 @@ module.exports = {
   },
   computed: {
     style () {
-      return {
+      return this.isVisible() ? {
         top: this.y - document.body.scrollTop + 'px',
         left: this.x + 'px'
-      }
+      } : {}
     },
     isVisible () {
       return this.x !== null && this.y !== null
