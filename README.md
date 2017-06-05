@@ -39,5 +39,23 @@ module.exports = {
 </style>
 ```
 
+If you'd like to pass any context from the original `oncontextmenu`
+event down to your menu template, you can pass it as the second
+param of `open` and access it within a [scoped slot](https://vuejs.org/v2/guide/components.html#Scoped-Slots)
+under the `userData` property. For example:
+
+```html
+<div @contextmenu.prevent="$refs.menu.open($event, 'foo')">
+  ...
+</div>
+
+<context-menu ref="menu">
+  <template scope="child">
+    <li @click="onClick('A', child.userData)">Option A</li>
+    <li @click="onClick('B', child.userData)">Option B</li>
+  </template>
+</context-menu>
+```
+
 ## Related
 - [vue-context-menu](https://github.com/vmaimone/vue-context-menu)

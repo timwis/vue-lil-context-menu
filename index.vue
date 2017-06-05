@@ -5,9 +5,9 @@
     :style="style"
     tabindex="-1"
     @blur="close"
-    @click.capture="close"
+    @click="close"
     @contextmenu.capture.prevent>
-    <slot></slot>
+    <slot :user-data="userData"></slot>
   </div>
 </template>
 
@@ -19,7 +19,8 @@ module.exports = {
   data () {
     return {
       x: null,
-      y: null
+      y: null,
+      userData: null
     }
   },
   computed: {
@@ -34,14 +35,16 @@ module.exports = {
     }
   },
   methods: {
-    open (evt) {
+    open (evt, userData) {
       this.x = evt.pageX || evt.clientX
       this.y = evt.pageY || evt.clientY
+      this.userData = userData
       Vue.nextTick(() => this.$el.focus())
     },
     close (evt) {
       this.x = null
       this.y = null
+      this.userData = null
     }
   }
 }
