@@ -1,6 +1,6 @@
 {
   "name": "vue-lil-context-menu",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "A flexible context menu component for Vue",
   "main": "index.vue",
   "scripts": {
