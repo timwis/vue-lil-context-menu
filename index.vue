@@ -13,39 +13,59 @@
 
 <script>
 const Vue = require('vue')
-
 module.exports = {
   name: 'lil-context-menu',
   data () {
     return {
       x: null,
       y: null,
-      userData: null
+      userData: null,
+      isVisible: false
     }
   },
   computed: {
     style () {
       return this.isVisible ? {
-        top: this.y - document.body.scrollTop + 'px',
+        top: this.y + 'px',
         left: this.x + 'px'
       } : {}
     },
-    isVisible () {
-      return this.x !== null && this.y !== null
-    }
   },
   methods: {
     open (evt, userData) {
-      this.x = evt.pageX || evt.clientX
-      this.y = evt.pageY || evt.clientY
-      this.userData = userData
-      Vue.nextTick(() => this.$el.focus())
+      this.userData = userData;
+      
+      let x = evt.clientX,
+      	  y = event.clientY;
+      	  
+      this.isVisible = true;
+      
+      Vue.nextTick(() => {
+      	this.setMenu(x, y);
+      	this.$el.focus()
+      })
     },
     close (evt) {
       this.x = null
       this.y = null
       this.userData = null
-    }
+      this.isVisible = false
+    },
+    setMenu (x, y) {
+      let largestHeight = window.innerHeight - this.$el.offsetHeight - 25;
+      let largestWidth = window.innerWidth - this.$el.offsetWidth - 25;
+      
+      if (y > largestHeight) {
+      	y = largestHeight
+      }
+      
+      if (x > largestWidth) {
+      	x = largestWidth
+      }
+      
+      this.x = x
+      this.y = y
+    },
   }
 }
 </script>
